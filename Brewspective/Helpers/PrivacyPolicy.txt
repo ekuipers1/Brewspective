@@ -1,0 +1,46 @@
+### Introduction ###
+
+Welcome to Brewspective! This Privacy Policy outlines how we handle your information when you use our mobile application. By using Brewspective, you agree to the terms of this Privacy Policy.
+
+### Information We Collect
+
+**Location Data**: Brewspective uses your device's location services to determine your current location. This is done to provide location-based services and features within the app. We only access your location data when the app is active. Once the app is closed or in the background, we no longer access your location.
+
+### How We Use Your Information
+
+**Location Data**: The location data collected is used solely to enhance your experience within the app. For example, it allows us to provide you with relevant information and services based on your current location.
+
+### Information Sharing and Disclosure
+
+Brewspective does not collect, store, or share any personal data. We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information.
+
+### Data Security
+
+We are committed to ensuring that your location data is secure. We have implemented appropriate technical and organizational measures to safeguard the data we access through the app.
+
+### Accuracy of Information
+
+Brewspective strives to provide accurate and up-to-date information. However, we do not guarantee the accuracy, completeness, or reliability of any information displayed within the app. Users are responsible for verifying the information provided and should not solely rely on it for critical decisions.
+
+### Legal Drinking Age
+
+Brewspective promotes responsible drinking. Users must adhere to the legal drinking age in their respective countries or regions. Brewspective is not responsible for any misuse of the app by individuals under the legal drinking age.
+
+### Don't Drink and Drive
+
+Brewspective strongly discourages drinking and driving. Users should always make safe and responsible choices regarding alcohol consumption. Never operate a vehicle under the influence of alcohol.
+
+### Your Consent
+
+By using Brewspective, you consent to our privacy policy and agree to the terms outlined, including those related to data usage, accuracy of information, legal drinking age, and responsible drinking.
+
+### Changes to Our Privacy Policy
+
+We may update our Privacy Policy from time to time. Any changes will be posted on this page, and the updated policy will be effective immediately upon posting.
+
+### Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at:
+
+Email: support@brewspective.com
+

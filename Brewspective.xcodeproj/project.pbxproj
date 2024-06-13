@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA38A92C2C007BD500428A86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA38A92B2C007BD500428A86 /* FavoriteView.swift */; };
+		AA51B5BD2BDC08C700C7D4BA /* BrewerySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5BC2BDC08C700C7D4BA /* BrewerySettingsView.swift */; };
+		AA51B5C02BDFB4D400C7D4BA /* BreweryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5BF2BDFB4D400C7D4BA /* BreweryService.swift */; };
+		AA51B5C22BDFC53B00C7D4BA /* BreweryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5C12BDFC53B00C7D4BA /* BreweryModels.swift */; };
+		AA51B5C42BDFC57D00C7D4BA /* LocationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5C32BDFC57D00C7D4BA /* LocationUtility.swift */; };
+		AA5FD5472BD9761200323523 /* BrewspectiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5462BD9761200323523 /* BrewspectiveApp.swift */; };
+		AA5FD5492BD9761200323523 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5482BD9761200323523 /* ContentView.swift */; };
+		AA5FD54B2BD9761400323523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5FD54A2BD9761400323523 /* Assets.xcassets */; };
+		AA5FD54E2BD9761400323523 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5FD54D2BD9761400323523 /* Preview Assets.xcassets */; };
+		AA5FD5552BD9775100323523 /* BreweryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5542BD9775100323523 /* BreweryView.swift */; };
+		AA5FD5572BD97D3E00323523 /* BreweryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5562BD97D3E00323523 /* BreweryDetailView.swift */; };
+		AA5FD5592BD97F9600323523 /* BrewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5582BD97F9600323523 /* BrewHome.swift */; };
+		AA5FD55B2BD97FB900323523 /* BreweryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD55A2BD97FB900323523 /* BreweryMapView.swift */; };
+		AA5FD55D2BD97FC800323523 /* BreweryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD55C2BD97FC800323523 /* BreweryTypeView.swift */; };
+		AA5FD55F2BDA71E400323523 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD55E2BDA71E400323523 /* NavigationManager.swift */; };
+		AA5FD5632BDBB0F900323523 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5FD5622BDBB0F900323523 /* Helpers.swift */; };
+		AA706A542BE3C18E005EFBC3 /* BreweryMapDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA706A532BE3C18E005EFBC3 /* BreweryMapDetailsView.swift */; };
+		AA7562C92BEA33F7000EAA80 /* BreweryTypeViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7562C82BEA33F7000EAA80 /* BreweryTypeViewDetail.swift */; };
+		AA7562CB2BEBA5CA000EAA80 /* BreweryCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7562CA2BEBA5CA000EAA80 /* BreweryCountryView.swift */; };
+		AA7562CD2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7562CC2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift */; };
+		AA75C4942BF2549A006CB92F /* AddEstablishmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */; };
+		AAC4ADA92C19CAE4000CC134 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */; };
+		AAC4ADAB2C1B1664000CC134 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4ADAA2C1B1664000CC134 /* LoadingView.swift */; };
+		AAEFF67D2C04CC1A009050D7 /* UpdateEstablishmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */; };
+		AAFAE4A92BFCB26C00E5FC02 /* PrivacyPolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAFAE4A82BFCB26C00E5FC02 /* PrivacyPolicy.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA38A92B2C007BD500428A86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		AA51B5BC2BDC08C700C7D4BA /* BrewerySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewerySettingsView.swift; sourceTree = "<group>"; };
+		AA51B5BF2BDFB4D400C7D4BA /* BreweryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryService.swift; sourceTree = "<group>"; };
+		AA51B5C12BDFC53B00C7D4BA /* BreweryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryModels.swift; sourceTree = "<group>"; };
+		AA51B5C32BDFC57D00C7D4BA /* LocationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtility.swift; sourceTree = "<group>"; };
+		AA5FD5432BD9761200323523 /* Brewspective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewspective.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5FD5462BD9761200323523 /* BrewspectiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewspectiveApp.swift; sourceTree = "<group>"; };
+		AA5FD5482BD9761200323523 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA5FD54A2BD9761400323523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA5FD54D2BD9761400323523 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA5FD5542BD9775100323523 /* BreweryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryView.swift; sourceTree = "<group>"; };
+		AA5FD5562BD97D3E00323523 /* BreweryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryDetailView.swift; sourceTree = "<group>"; };
+		AA5FD5582BD97F9600323523 /* BrewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewHome.swift; sourceTree = "<group>"; };
+		AA5FD55A2BD97FB900323523 /* BreweryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryMapView.swift; sourceTree = "<group>"; };
+		AA5FD55C2BD97FC800323523 /* BreweryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryTypeView.swift; sourceTree = "<group>"; };
+		AA5FD55E2BDA71E400323523 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		AA5FD5622BDBB0F900323523 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		AA706A532BE3C18E005EFBC3 /* BreweryMapDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryMapDetailsView.swift; sourceTree = "<group>"; };
+		AA7562C82BEA33F7000EAA80 /* BreweryTypeViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryTypeViewDetail.swift; sourceTree = "<group>"; };
+		AA7562CA2BEBA5CA000EAA80 /* BreweryCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCountryView.swift; sourceTree = "<group>"; };
+		AA7562CC2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCountryViewDetail.swift; sourceTree = "<group>"; };
+		AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEstablishmentView.swift; sourceTree = "<group>"; };
+		AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AAC4ADAA2C1B1664000CC134 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEstablishmentView.swift; sourceTree = "<group>"; };
+		AAFAE4A82BFCB26C00E5FC02 /* PrivacyPolicy.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PrivacyPolicy.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA5FD5402BD9761200323523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA2D04C12BFF22EE00B4C164 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				AA51B5C32BDFC57D00C7D4BA /* LocationUtility.swift */,
+				AA5FD55A2BD97FB900323523 /* BreweryMapView.swift */,
+				AA706A532BE3C18E005EFBC3 /* BreweryMapDetailsView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		AA2D04C22BFF22FD00B4C164 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				AA5FD55C2BD97FC800323523 /* BreweryTypeView.swift */,
+				AA7562C82BEA33F7000EAA80 /* BreweryTypeViewDetail.swift */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		AA2D04C32BFF230B00B4C164 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */,
+				AAFAE4A82BFCB26C00E5FC02 /* PrivacyPolicy.txt */,
+				AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */,
+				AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */,
+				AA5FD5622BDBB0F900323523 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AA2D04C42BFF232C00B4C164 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				AA7562CA2BEBA5CA000EAA80 /* BreweryCountryView.swift */,
+				AA7562CC2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		AA2D04C52BFF237100B4C164 /* Brewery */ = {
+			isa = PBXGroup;
+			children = (
+				AA5FD5542BD9775100323523 /* BreweryView.swift */,
+				AA5FD5562BD97D3E00323523 /* BreweryDetailView.swift */,
+			);
+			path = Brewery;
+			sourceTree = "<group>";
+		};
+		AA2D04C62BFF238600B4C164 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AA51B5BC2BDC08C700C7D4BA /* BrewerySettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AA38A92A2C007BB500428A86 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				AA38A92B2C007BD500428A86 /* FavoriteView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		AA51B5BE2BDFB4C000C7D4BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA51B5BF2BDFB4D400C7D4BA /* BreweryService.swift */,
+				AA51B5C12BDFC53B00C7D4BA /* BreweryModels.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA5FD53A2BD9761200323523 = {
+			isa = PBXGroup;
+			children = (
+				AA5FD5452BD9761200323523 /* Brewspective */,
+				AA5FD5442BD9761200323523 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA5FD5442BD9761200323523 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA5FD5432BD9761200323523 /* Brewspective.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA5FD5452BD9761200323523 /* Brewspective */ = {
+			isa = PBXGroup;
+			children = (
+				AA38A92A2C007BB500428A86 /* Favorites */,
+				AA2D04C62BFF238600B4C164 /* Settings */,
+				AA2D04C52BFF237100B4C164 /* Brewery */,
+				AA2D04C42BFF232C00B4C164 /* Country */,
+				AA2D04C32BFF230B00B4C164 /* Helpers */,
+				AA2D04C22BFF22FD00B4C164 /* Type */,
+				AA2D04C12BFF22EE00B4C164 /* Map */,
+				AA51B5BE2BDFB4C000C7D4BA /* Data */,
+				AA5FD5462BD9761200323523 /* BrewspectiveApp.swift */,
+				AA5FD55E2BDA71E400323523 /* NavigationManager.swift */,
+				AA5FD5582BD97F9600323523 /* BrewHome.swift */,
+				AAC4ADAA2C1B1664000CC134 /* LoadingView.swift */,
+				AA5FD5482BD9761200323523 /* ContentView.swift */,
+				AA5FD54A2BD9761400323523 /* Assets.xcassets */,
+				AA5FD54C2BD9761400323523 /* Preview Content */,
+			);
+			path = Brewspective;
+			sourceTree = "<group>";
+		};
+		AA5FD54C2BD9761400323523 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AA5FD54D2BD9761400323523 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA5FD5422BD9761200323523 /* Brewspective */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5FD5512BD9761400323523 /* Build configuration list for PBXNativeTarget "Brewspective" */;
+			buildPhases = (
+				AA5FD53F2BD9761200323523 /* Sources */,
+				AA5FD5402BD9761200323523 /* Frameworks */,
+				AA5FD5412BD9761200323523 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brewspective;
+			productName = Brewspective;
+			productReference = AA5FD5432BD9761200323523 /* Brewspective.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA5FD53B2BD9761200323523 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					AA5FD5422BD9761200323523 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = AA5FD53E2BD9761200323523 /* Build configuration list for PBXProject "Brewspective" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				de,
+			);
+			mainGroup = AA5FD53A2BD9761200323523;
+			productRefGroup = AA5FD5442BD9761200323523 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA5FD5422BD9761200323523 /* Brewspective */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA5FD5412BD9761200323523 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFAE4A92BFCB26C00E5FC02 /* PrivacyPolicy.txt in Resources */,
+				AA5FD54E2BD9761400323523 /* Preview Assets.xcassets in Resources */,
+				AAC4ADA92C19CAE4000CC134 /* Localizable.xcstrings in Resources */,
+				AA5FD54B2BD9761400323523 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA5FD53F2BD9761200323523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA51B5C02BDFB4D400C7D4BA /* BreweryService.swift in Sources */,
+				AAEFF67D2C04CC1A009050D7 /* UpdateEstablishmentView.swift in Sources */,
+				AA5FD55B2BD97FB900323523 /* BreweryMapView.swift in Sources */,
+				AA5FD5572BD97D3E00323523 /* BreweryDetailView.swift in Sources */,
+				AA5FD5592BD97F9600323523 /* BrewHome.swift in Sources */,
+				AAC4ADAB2C1B1664000CC134 /* LoadingView.swift in Sources */,
+				AA5FD5632BDBB0F900323523 /* Helpers.swift in Sources */,
+				AA75C4942BF2549A006CB92F /* AddEstablishmentView.swift in Sources */,
+				AA7562CD2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift in Sources */,
+				AA5FD5492BD9761200323523 /* ContentView.swift in Sources */,
+				AA7562C92BEA33F7000EAA80 /* BreweryTypeViewDetail.swift in Sources */,
+				AA5FD5472BD9761200323523 /* BrewspectiveApp.swift in Sources */,
+				AA51B5BD2BDC08C700C7D4BA /* BrewerySettingsView.swift in Sources */,
+				AA5FD55F2BDA71E400323523 /* NavigationManager.swift in Sources */,
+				AA706A542BE3C18E005EFBC3 /* BreweryMapDetailsView.swift in Sources */,
+				AA5FD5552BD9775100323523 /* BreweryView.swift in Sources */,
+				AA7562CB2BEBA5CA000EAA80 /* BreweryCountryView.swift in Sources */,
+				AA51B5C42BDFC57D00C7D4BA /* LocationUtility.swift in Sources */,
+				AA51B5C22BDFC53B00C7D4BA /* BreweryModels.swift in Sources */,
+				AA38A92C2C007BD500428A86 /* FavoriteView.swift in Sources */,
+				AA5FD55D2BD97FC800323523 /* BreweryTypeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA5FD54F2BD9761400323523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA5FD5502BD9761400323523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA5FD5522BD9761400323523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
+				DEVELOPMENT_TEAM = 57973X84UC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brewspective/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "get your location to a brewery";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "location for brewery";
+				INFOPLIST_KEY_NSLocationUsageDescription = "To know how close you are to a brewery";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = brewery;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.eckodesign.Brewspective;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AA5FD5532BD9761400323523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
+				DEVELOPMENT_TEAM = 57973X84UC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brewspective/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "get your location to a brewery";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "location for brewery";
+				INFOPLIST_KEY_NSLocationUsageDescription = "To know how close you are to a brewery";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = brewery;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.eckodesign.Brewspective;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA5FD53E2BD9761200323523 /* Build configuration list for PBXProject "Brewspective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5FD54F2BD9761400323523 /* Debug */,
+				AA5FD5502BD9761400323523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5FD5512BD9761400323523 /* Build configuration list for PBXNativeTarget "Brewspective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5FD5522BD9761400323523 /* Debug */,
+				AA5FD5532BD9761400323523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA5FD53B2BD9761200323523 /* Project object */;
+}
