@@ -67,13 +67,15 @@ struct BrewerySettingsView: View {
                                 Spacer()
                                 Image(systemName: "megaphone")
                                     .foregroundColor(Color.Brew_Text)
+                                    .font(.title)
                                 Spacer()
                                 Text("What's new?")
                                     .foregroundColor(Color.Brew_Text)
+                                    .frame(width: 80)
                                 Spacer()
                                 
                             }
-                            .frame(width: 100, height: 100) // Adjust size as needed
+                            .frame(width: 110, height: 110) // Adjust size as needed
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
                         }
@@ -86,14 +88,16 @@ struct BrewerySettingsView: View {
                             VStack {
                                 Spacer()
                                 Image(systemName: "globe")
-                                    .fontWeight(.bold)
+//                                    .fontWeight(.bold)
+                                    .font(.title)
                                     .foregroundColor(Color.Brew_Text)
                                 Spacer()
                                 Text("Language")
                                     .foregroundColor(Color.Brew_Text)
+                                    .frame(width: 80)
                                 Spacer()
                             }
-                            .frame(width: 100, height: 100) // Adjust size as needed
+                            .frame(width: 110, height: 110) // Adjust size as needed
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
                         }
@@ -105,12 +109,15 @@ struct BrewerySettingsView: View {
                                 Spacer()
                                 Image(systemName: "lock.shield")
                                     .foregroundColor(Color.Brew_Text)
+                                    .font(.title)
+                                
                                 Spacer()
                                 Text("Privacy Policy")
                                     .foregroundColor(Color.Brew_Text)
+                                    .frame(width: 80)
                                 Spacer()
                             }
-                            .frame(width: 100, height: 100) // Adjust size as needed
+                            .frame(width: 110, height: 110) // Adjust size as needed
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
                         }
@@ -184,36 +191,47 @@ struct IconSelectionView: View {
     let icons: [String] = ["Hop", "Brespective", "Beer Map", "Beer Mugs"]
     @State private var selectedIcon: String?
     
+    let columns = [
+            GridItem(.fixed(120)),
+            GridItem(.fixed(120))
+        ]
+    
     var body: some View {
-        List(icons, id: \.self) { iconName in
-            HStack {
-                Image(uiImage: UIImage(named: iconName) ?? UIImage())
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 60, height: 60)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(icons, id: \.self) { iconName in
+                    VStack {
+                        Image(uiImage: UIImage(named: iconName) ?? UIImage())
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(10)
+                        
+                        Text(iconName)
+                            .padding(.top, 5)
+                        
+                        if selectedIcon == iconName {
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    .frame(width: 120, height: 120)
+                    .background(Color(UIColor.white))
                     .cornerRadius(10)
-                
-                Text(iconName)
-                    .padding(.leading, 10)
-                
-                Spacer()
-                
-                if selectedIcon == iconName {
-                    Image(systemName: "checkmark")
-                }
-            }.listRowBackground(Color.clear)
-            
-                .onTapGesture {
-                    UIApplication.shared.setAlternateIconName(iconName == "Brespective" ? nil : iconName) { error in
-                        if let error = error {
-                            print("Error changing app icon: \(error.localizedDescription)")
-                        } else {
-                            selectedIcon = iconName
+                    .shadow(radius: 5)
+                    .onTapGesture {
+                        UIApplication.shared.setAlternateIconName(iconName == "Brespective" ? nil : iconName) { error in
+                            if let error = error {
+                                print("Error changing app icon: \(error.localizedDescription)")
+                            } else {
+                                selectedIcon = iconName
+                            }
                         }
                     }
                 }
-        }.scrollContentBackground(.hidden)
-        
+            }
+            .padding()
+        }
     }
 }
 
@@ -234,6 +252,9 @@ struct WhatsNewView: View {
                 VersionRow(version: "V 1.0.1 (2)", description: "Added Spanish and German Language")
                 VersionRow(version: "", description: "Added What's New section")
                 VersionRow(version: "", description: "Added a Language switch to the settings section")
+                VersionRow(version: "V 1.0.1 (3)", description: "Updated Splash Screen")
+                VersionRow(version: "", description: "Updated Settings Page")
+                VersionRow(version: "", description: "Updated Change Icon layout")
             }
             .padding()
             

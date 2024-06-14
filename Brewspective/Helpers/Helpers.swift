@@ -89,3 +89,57 @@ func getAppVersion() -> String {
 
 
 let widthFull = UIScreen.main.bounds.width - 20
+
+
+struct BeerGlassShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let topWidth = rect.width * 0.9
+        let bottomWidth = rect.width * 0.6
+        let glassHeight = rect.height * 0.9
+
+        // Draw the main body of the beer glass
+        path.move(to: CGPoint(x: (rect.width - topWidth) / 2, y: rect.minY))
+        path.addLine(to: CGPoint(x: (rect.width + topWidth) / 2, y: rect.minY))
+        path.addLine(to: CGPoint(x: (rect.width + bottomWidth) / 2, y: glassHeight))
+        path.addLine(to: CGPoint(x: (rect.width - bottomWidth) / 2, y: glassHeight))
+        path.closeSubpath()
+
+        return path
+    }
+}
+
+struct BeerGlassHandleShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let handleWidth: CGFloat = rect.width * 0.33
+        let handleHeight: CGFloat = rect.height * 0.4
+
+        // Draw the handle
+        path.move(to: CGPoint(x: rect.width * 0.75, y: rect.height * 0.25))
+        path.addLine(to: CGPoint(x: rect.width * 0.75 + handleWidth, y: rect.height * 0.25))
+        path.addLine(to: CGPoint(x: rect.width * 0.75 + handleWidth, y: rect.height * 0.25 + handleHeight))
+        path.addLine(to: CGPoint(x: rect.width * 0.75, y: rect.height * 0.25 + handleHeight))
+        path.closeSubpath()
+
+        return path
+    }
+}
+
+struct Bubble: View {
+    @State private var offset: CGFloat = .random(in: 0...1)
+    @State private var opacity: Double = .random(in: 0.3...0.6)
+
+    var body: some View {
+        Circle()
+            .fill(Color.white.opacity(opacity))
+            .frame(width: 10, height: 10)
+            .offset(x: .random(in: -20...20), y: offset * -150)
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: .random(in: 2...4)).repeatForever(autoreverses: false)) {
+                    offset = 1
+                }
+            }
+    }
+}
+
