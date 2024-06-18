@@ -188,7 +188,7 @@ struct BrewerySettingsView: View {
 
 
 struct IconSelectionView: View {
-    let icons: [String] = ["Hop", "Brespective", "Beer Map", "Beer Mugs"]
+    let icons: [String] = ["Hop", "Brewspective", "Beer Map", "Beer Mugs"]
     @State private var selectedIcon: String?
     
     let columns = [
@@ -321,7 +321,19 @@ struct PrivacyView: View {
     }
     
     func loadPrivacyPolicy() {
-        if let url = Bundle.main.url(forResource: "PrivacyPolicy", withExtension: "txt") {
+        let languageCode = Locale.current.languageCode
+        var fileName: String
+        
+        switch languageCode {
+        case "es":
+            fileName = "PolíticadePrivacidad"
+        case "de":
+            fileName = "Datenschutzrichtlinie"
+        default:
+            fileName = "PrivacyPolicy"
+        }
+        
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "txt") {
             do {
                 privacyPolicyText = try String(contentsOf: url, encoding: .utf8)
             } catch {

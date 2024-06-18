@@ -1,0 +1,45 @@
+### Política de Privacidad ###
+
+Bienvenido a Brewspective! Esta Política de Privacidad describe cómo manejamos su información cuando utiliza nuestra aplicación móvil. Al usar Brewspective, usted acepta los términos de esta Política de Privacidad.
+
+### Información que Recopilamos
+
+**Datos de Ubicación**: Brewspective utiliza los servicios de ubicación de su dispositivo para determinar su ubicación actual. Esto se hace para proporcionar servicios y funciones basados en la ubicación dentro de la aplicación. Solo accedemos a sus datos de ubicación cuando la aplicación está activa. Una vez que la aplicación está cerrada o en segundo plano, ya no accedemos a su ubicación.
+
+### Cómo Usamos su Información
+
+**Datos de Ubicación**: Los datos de ubicación recopilados se utilizan únicamente para mejorar su experiencia dentro de la aplicación. Por ejemplo, nos permite proporcionarle información y servicios relevantes basados en su ubicación actual.
+
+### Compartir y Divulgar Información
+
+Brewspective no recopila, almacena ni comparte ningún dato personal. No vendemos, intercambiamos ni transferimos a terceros su información personal identificable.
+
+### Seguridad de los Datos
+
+Estamos comprometidos a garantizar que sus datos de ubicación estén seguros. Hemos implementado medidas técnicas y organizativas apropiadas para proteger los datos a los que accedemos a través de la aplicación.
+
+### Precisión de la Información
+
+Brewspective se esfuerza por proporcionar información precisa y actualizada. Sin embargo, no garantizamos la exactitud, integridad o fiabilidad de la información mostrada en la aplicación. Los usuarios son responsables de verificar la información proporcionada y no deben depender únicamente de ella para decisiones críticas.
+
+### Edad Legal para el Consumo de Alcohol
+
+Brewspective promueve el consumo responsable de alcohol. Los usuarios deben cumplir con la edad legal para el consumo de alcohol en sus respectivos países o regiones. Brewspective no es responsable por el mal uso de la aplicación por parte de personas menores de la edad legal para el consumo de alcohol.
+
+### No Beber y Conducir
+
+Brewspective desaconseja firmemente beber y conducir. Los usuarios deben tomar decisiones seguras y responsables con respecto al consumo de alcohol. Nunca opere un vehículo bajo la influencia del alcohol.
+
+### Su Consentimiento
+
+Al usar Brewspective, usted da su consentimiento a nuestra política de privacidad y acepta los términos descritos, incluidos los relacionados con el uso de datos, la precisión de la información, la edad legal para el consumo de alcohol y el consumo responsable.
+
+### Cambios en Nuestra Política de Privacidad
+
+Podemos actualizar nuestra Política de Privacidad de vez en cuando. Cualquier cambio se publicará en esta página, y la política actualizada será efectiva inmediatamente después de su publicación.
+
+### Contáctenos
+
+Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en:
+
+Correo electrónico: support@brewspective.com

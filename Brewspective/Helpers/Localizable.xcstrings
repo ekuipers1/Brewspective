@@ -288,6 +288,12 @@
             "value" : "Eine Bar. Keine Brauereiausrüstung vor Ort."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A bar. No brewery equipment on premise."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -462,7 +468,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A restaurant specializing in beer or a restaurant/bar with its own brewery."
+            "value" : "Ein auf Bier spezialisiertes Restaurant oder Restaurant/Bar mit eigener Brauerei."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A beer-focused restaurant or restaurant/bar with a brewery on-premise."
           }
         },
         "es" : {
@@ -575,6 +587,12 @@
             "value" : "Eine geschlossene Brauerei"
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A closed brewery"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -595,6 +613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eine Brauerei, die die Ausrüstung einer anderen Brauerei verwendet."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A brewery that uses another brewery’s equipment."
           }
         },
         "es" : {
@@ -1088,6 +1112,12 @@
             "value" : "Eine sehr große Brauerei. Wahrscheinlich nicht für Besucher. Beispiel: Miller-Coors."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A very large brewery. Likely not for visitors. Ex. Miller-Coors."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1202,7 +1232,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "micro_description"
+            "value" : "Most craft breweries. For example, Samual Adams is still considered a micro brewery."
           }
         },
         "es" : {
@@ -1247,6 +1277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eine extrem kleine Brauerei, die normalerweise nur lokal vertreibt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An extremely small brewery which typically only distributes locally"
           }
         },
         "es" : {
@@ -1469,6 +1505,12 @@
             "value" : "Eine Brauerei ist in Planung oder noch nicht für die Öffentlichkeit zugänglich."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A brewery in planning or not yet opened to the public."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1601,6 +1643,12 @@
             "value" : "Ähnlich wie Lohnbrauen, bezieht sich aber eher auf einen Brauerei-Inkubator."
           }
         },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Similar to contract brewing but refers more to a brewery incubator."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1621,6 +1669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ein regionaler Standort einer erweiterten Brauerei. Beispiel: Sierra Nevadas Standort in Asheville, NC."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A regional location of an expanded brewery. Ex. Sierra Nevada’s Asheville, NC location."
           }
         },
         "es" : {

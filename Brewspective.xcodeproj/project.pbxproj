@@ -28,6 +28,8 @@
 		AA7562CB2BEBA5CA000EAA80 /* BreweryCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7562CA2BEBA5CA000EAA80 /* BreweryCountryView.swift */; };
 		AA7562CD2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7562CC2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift */; };
 		AA75C4942BF2549A006CB92F /* AddEstablishmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */; };
+		AA9A57682C21BD0800C9A979 /* Datenschutzrichtlinie.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA9A57662C21BD0800C9A979 /* Datenschutzrichtlinie.txt */; };
+		AA9A57692C21BD0800C9A979 /* PolíticadePrivacidad.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA9A57672C21BD0800C9A979 /* PolíticadePrivacidad.txt */; };
 		AAC4ADA92C19CAE4000CC134 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */; };
 		AAC4ADAB2C1B1664000CC134 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4ADAA2C1B1664000CC134 /* LoadingView.swift */; };
 		AAEFF67D2C04CC1A009050D7 /* UpdateEstablishmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */; };
@@ -57,6 +59,8 @@
 		AA7562CA2BEBA5CA000EAA80 /* BreweryCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCountryView.swift; sourceTree = "<group>"; };
 		AA7562CC2BEBB01B000EAA80 /* BreweryCountryViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCountryViewDetail.swift; sourceTree = "<group>"; };
 		AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEstablishmentView.swift; sourceTree = "<group>"; };
+		AA9A57662C21BD0800C9A979 /* Datenschutzrichtlinie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Datenschutzrichtlinie.txt; sourceTree = "<group>"; };
+		AA9A57672C21BD0800C9A979 /* PolíticadePrivacidad.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "PolíticadePrivacidad.txt"; sourceTree = "<group>"; };
 		AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AAC4ADAA2C1B1664000CC134 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEstablishmentView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				AAC4ADA82C19CAE4000CC134 /* Localizable.xcstrings */,
+				AA9A57662C21BD0800C9A979 /* Datenschutzrichtlinie.txt */,
+				AA9A57672C21BD0800C9A979 /* PolíticadePrivacidad.txt */,
 				AAFAE4A82BFCB26C00E5FC02 /* PrivacyPolicy.txt */,
 				AA75C4932BF2549A006CB92F /* AddEstablishmentView.swift */,
 				AAEFF67C2C04CC1A009050D7 /* UpdateEstablishmentView.swift */,
@@ -254,6 +260,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9A57682C21BD0800C9A979 /* Datenschutzrichtlinie.txt in Resources */,
+				AA9A57692C21BD0800C9A979 /* PolíticadePrivacidad.txt in Resources */,
 				AAFAE4A92BFCB26C00E5FC02 /* PrivacyPolicy.txt in Resources */,
 				AA5FD54E2BD9761400323523 /* Preview Assets.xcassets in Resources */,
 				AAC4ADA92C19CAE4000CC134 /* Localizable.xcstrings in Resources */,
@@ -421,7 +429,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
 				DEVELOPMENT_TEAM = 57973X84UC;
 				ENABLE_PREVIEWS = YES;
@@ -461,7 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
 				DEVELOPMENT_TEAM = 57973X84UC;
 				ENABLE_PREVIEWS = YES;

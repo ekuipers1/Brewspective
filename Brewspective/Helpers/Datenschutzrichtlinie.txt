@@ -1,0 +1,45 @@
+### Datenschutzrichtlinie ###
+
+Willkommen bei Brewspective! Diese Datenschutzrichtlinie beschreibt, wie wir Ihre Informationen behandeln, wenn Sie unsere mobile Anwendung nutzen. Durch die Nutzung von Brewspective stimmen Sie den Bedingungen dieser Datenschutzrichtlinie zu.
+
+### Informationen, die wir sammeln
+
+**Standortdaten**: Brewspective verwendet die Standortdienste Ihres Geräts, um Ihren aktuellen Standort zu bestimmen. Dies erfolgt, um standortbasierte Dienste und Funktionen innerhalb der App bereitzustellen. Wir greifen nur auf Ihre Standortdaten zu, wenn die App aktiv ist. Sobald die App geschlossen oder im Hintergrund ist, greifen wir nicht mehr auf Ihren Standort zu.
+
+### Wie wir Ihre Informationen verwenden
+
+**Standortdaten**: Die gesammelten Standortdaten werden ausschließlich verwendet, um Ihre Erfahrung innerhalb der App zu verbessern. Beispielsweise ermöglicht es uns, Ihnen relevante Informationen und Dienste basierend auf Ihrem aktuellen Standort bereitzustellen.
+
+### Informationsweitergabe und -offenlegung
+
+Brewspective sammelt, speichert oder teilt keine persönlichen Daten. Wir verkaufen, tauschen oder übertragen Ihre persönlich identifizierbaren Informationen nicht an Dritte.
+
+### Datensicherheit
+
+Wir sind verpflichtet, sicherzustellen, dass Ihre Standortdaten sicher sind. Wir haben geeignete technische und organisatorische Maßnahmen implementiert, um die Daten, auf die wir über die App zugreifen, zu schützen.
+
+### Genauigkeit der Informationen
+
+Brewspective bemüht sich, genaue und aktuelle Informationen bereitzustellen. Wir garantieren jedoch nicht die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der in der App angezeigten Informationen. Die Benutzer sind dafür verantwortlich, die bereitgestellten Informationen zu überprüfen und sollten sich nicht ausschließlich darauf für wichtige Entscheidungen verlassen.
+
+### Gesetzliches Mindestalter für Alkoholkonsum
+
+Brewspective fördert verantwortungsvollen Alkoholkonsum. Die Benutzer müssen das gesetzliche Mindestalter für den Alkoholkonsum in ihren jeweiligen Ländern oder Regionen einhalten. Brewspective ist nicht verantwortlich für den Missbrauch der App durch Personen unter dem gesetzlichen Mindestalter für Alkoholkonsum.
+
+### Kein Trinken und Fahren
+
+Brewspective rät dringend davon ab, nach Alkoholkonsum zu fahren. Die Benutzer sollten stets sichere und verantwortungsbewusste Entscheidungen im Hinblick auf den Alkoholkonsum treffen. Betreiben Sie niemals ein Fahrzeug unter Alkoholeinfluss.
+
+### Ihre Zustimmung
+
+Durch die Nutzung von Brewspective stimmen Sie unserer Datenschutzrichtlinie zu und akzeptieren die beschriebenen Bedingungen, einschließlich derjenigen, die sich auf die Datennutzung, die Genauigkeit der Informationen, das gesetzliche Mindestalter für Alkoholkonsum und den verantwortungsvollen Alkoholkonsum beziehen.
+
+### Änderungen unserer Datenschutzrichtlinie
+
+Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht, und die aktualisierte Richtlinie wird sofort nach der Veröffentlichung wirksam.
+
+### Kontaktieren Sie uns
+
+Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter:
+
+E-Mail: support@brewspective.com
