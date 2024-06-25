@@ -15,6 +15,7 @@ struct BreweryTypeViewDetail: View {
     @State private var searchText = ""
     @State private var canLoadMore = true
     @State private var error: Error?
+    @State private var showErrorAlert = false
     
     private let breweryService = BreweryServiceType()
     @Environment(\.presentationMode) var presentationMode
@@ -85,6 +86,13 @@ struct BreweryTypeViewDetail: View {
                 breweries = []
                 fetchBreweries()
             }
+            .alert(isPresented: $showErrorAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(error?.localizedDescription ?? "Unknown error"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
     
@@ -104,6 +112,7 @@ struct BreweryTypeViewDetail: View {
                     }
                 } else if let error = error {
                     self.error = error
+                    self.showErrorAlert = true
                     self.canLoadMore = false
                 }
             }
@@ -111,9 +120,10 @@ struct BreweryTypeViewDetail: View {
     }
 }
 
+
 struct BreweryTypeViewDetail_Previews: PreviewProvider {
     static var previews: some View {
-        BreweryTypeViewDetail(icon: IconInfo(type: "Micro", symbolName: "house.fill", descriptionKey: "Description of Micro"))
+        BreweryTypeViewDetail(icon: IconInfo(type: "Micro", symbolName: "laurel.trailing", descriptionKey: "Description of Micro"))
             .environmentObject(NavigationManager())
     }
 }

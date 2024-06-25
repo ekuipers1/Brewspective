@@ -248,13 +248,9 @@ struct WhatsNewView: View {
                 .padding()
             
             VStack(alignment: .leading) {
-                VersionRow(version: "V 1.0.0 (1)", description: "Initial Build")
-                VersionRow(version: "V 1.0.1 (2)", description: "Added Spanish and German Language")
-                VersionRow(version: "", description: "Added What's New section")
-                VersionRow(version: "", description: "Added a Language switch to the settings section")
-                VersionRow(version: "V 1.0.1 (3)", description: "Updated Splash Screen")
-                VersionRow(version: "", description: "Updated Settings Page")
-                VersionRow(version: "", description: "Updated Change Icon layout")
+                VersionRow(version: "V 1.0.1 (11)", description: "Added share functionality")
+                VersionRow(version: "", description: "Added image functionality")
+                VersionRow(version: "", description: "Added route to brewery")
             }
             .padding()
             

@@ -15,7 +15,8 @@ struct BreweryView: View {
     @State private var page = 1
     @State private var searchText = ""
     @State private var showingIconDetails = false
-    
+    @State private var hasMoreResults = true
+
     private let breweryService = BreweryService()
     
     var body: some View {
@@ -45,9 +46,11 @@ struct BreweryView: View {
             
             HStack {
                 Spacer()
-                TextField("Search breweries...", text: $searchText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                TextField("Search breweries...", text: $searchText, onCommit: {
+                    searchBreweries()
+                })
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
                 Spacer()
             }
             .frame(width: UIScreen.main.bounds.width, height: 60)
@@ -56,7 +59,6 @@ struct BreweryView: View {
                 LazyVStack {
                     ForEach(breweries.filter { $0.name.contains(searchText) || searchText.isEmpty }, id: \.id) { brewery in
                         Button(action: {
-                            
                             UserDefaults.standard.set(brewery.id, forKey: "SelectedBreweryId")
                             print(brewery.id)
                             navigationManager.push(.breweryDetail, breweryId: brewery.id)
@@ -78,9 +80,15 @@ struct BreweryView: View {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle())
                             .scaleEffect(1.5)
+                    } else if !hasMoreResults {
+                        EmptyView()
+                    } else if !searchText.isEmpty {
+                        Color.clear.onAppear {
+                            searchBreweries()
+                        }
                     } else {
                         Color.clear.onAppear {
-                            fetchBreweries(query: searchText)
+                            fetchMoreBreweries()
                         }
                     }
                 }
@@ -89,7 +97,7 @@ struct BreweryView: View {
             .edgesIgnoringSafeArea(.all)
             .onAppear {
                 if breweries.isEmpty {
-                    fetchBreweries(query: searchText)
+                    fetchMoreBreweries()
                 }
             }
         }
@@ -98,13 +106,18 @@ struct BreweryView: View {
         }
     }
     
-    func fetchBreweries(query: String = "") {
+    func fetchMoreBreweries() {
+        guard hasMoreResults else { return }
         isLoading = true
-        breweryService.fetchBreweries(query: query, page: page) { response, error in
+        breweryService.fetchBreweries(query: "", page: page) { response, error in
             if let response = response {
-                self.allBreweries.append(contentsOf: response)
-                self.breweries = self.allBreweries
-                self.page += 1
+                if response.isEmpty {
+                    self.hasMoreResults = false
+                } else {
+                    self.allBreweries.append(contentsOf: response)
+                    self.breweries = self.allBreweries
+                    self.page += 1
+                }
             } else {
                 print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
             }
@@ -112,8 +125,19 @@ struct BreweryView: View {
         }
     }
     
-    func fetchMoreBreweries() {
-        fetchBreweries(query: searchText)
+    func searchBreweries() {
+        isLoading = true
+        hasMoreResults = true
+        breweryService.fetchBreweries(query: searchText, page: 1) { response, error in
+            if let response = response {
+                self.breweries = response
+                self.page = 1
+                self.hasMoreResults = response.count == 25 // Assuming search returns max 25 results per page
+            } else {
+                print("Search failed: \(error?.localizedDescription ?? "Unknown error")")
+            }
+            self.isLoading = false
+        }
     }
 }
 
@@ -122,6 +146,8 @@ struct Brewery: Codable, Identifiable {
     let name: String
     let brewery_type: String
 }
+
+
 
 
 
@@ -140,7 +166,7 @@ struct IconInfo: Identifiable {
 
 
 let icons = [
-    IconInfo(type: "Micro", symbolName: "house.fill", descriptionKey: "micro_description"),
+    IconInfo(type: "Micro", symbolName: "laurel.trailing", descriptionKey: "micro_description"),
     IconInfo(type: "Nano", symbolName: "leaf.fill", descriptionKey: "nano_description"),
     IconInfo(type: "Regional", symbolName: "map.fill", descriptionKey: "regional_description"),
     IconInfo(type: "Brewpub", symbolName: "person.2.fill", descriptionKey: "brewpub_description"),

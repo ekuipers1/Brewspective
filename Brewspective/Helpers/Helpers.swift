@@ -65,7 +65,7 @@ extension Image {
 struct IconUtility {
     static func icon(for type: String) -> String {
         switch type {
-        case "micro": return "house.fill"
+        case "micro": return "laurel.trailing"
         case "nano": return "leaf.fill"
         case "regional": return "map.fill"
         case "brewpub": return "person.2.fill"
@@ -143,3 +143,59 @@ struct Bubble: View {
     }
 }
 
+class BreweryStorage {
+    static let shared = BreweryStorage()
+    
+    private init() {}
+    
+    func saveBreweryImage(id: String, image: UIImage) throws {
+        let imageData = image.jpegData(compressionQuality: 1.0)
+        let count = getImageCount(for: id)
+        guard count < 6 else {
+            throw NSError(domain: "Maximum number of images reached", code: 1, userInfo: nil)
+        }
+        
+        let filename = getDocumentsDirectory().appendingPathComponent("\(id)_\(count + 1).jpg")
+        try imageData?.write(to: filename, options: .atomic)
+        
+        var ids = getStoredIDs()
+        if !ids.contains(id) {
+            ids.append(id)
+            UserDefaults.standard.set(ids, forKey: "storedIDs")
+        }
+    }
+    
+    func getBreweryImages(by id: String) -> [UIImage] {
+        var images = [UIImage]()
+        let count = getImageCount(for: id)
+        for i in 1...count {
+            let filename = getDocumentsDirectory().appendingPathComponent("\(id)_\(i).jpg")
+            if let data = try? Data(contentsOf: filename), let image = UIImage(data: data) {
+                images.append(image)
+            }
+        }
+        return images
+    }
+    
+    func getImageCount(for id: String) -> Int {
+        var count = 0
+        for i in 1...6 {
+            let filename = getDocumentsDirectory().appendingPathComponent("\(id)_\(i).jpg")
+            if FileManager.default.fileExists(atPath: filename.path) {
+                count += 1
+            } else {
+                break
+            }
+        }
+        return count
+    }
+    
+    func getStoredIDs() -> [String] {
+        return UserDefaults.standard.stringArray(forKey: "storedIDs") ?? []
+    }
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+}

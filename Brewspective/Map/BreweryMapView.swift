@@ -9,7 +9,6 @@
 import SwiftUI
 import MapKit
 
-
 struct BreweryMapView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var navigationManager: NavigationManager
@@ -26,6 +25,7 @@ struct BreweryMapView: View {
                 MapAnnotation(coordinate: brewery.coordinate) {
                     CustomMapAnnotation(brewery: brewery) {
                         selectedBrewery = brewery
+                        UserDefaults.standard.set(brewery.id, forKey: "SelectedBreweryId")
                     }
                 }
             }
@@ -33,7 +33,10 @@ struct BreweryMapView: View {
             .edgesIgnoringSafeArea(.all)
             .onAppear {
                 viewModel.checkIfLocationServicesIsEnabled()
-                viewModel.fetchBreweries()
+                // Fetch breweries initially
+                if let userLocation = viewModel.getCurrentLocation() {
+                    viewModel.fetchBreweries(at: userLocation, updateRegion: true)
+                }
             }
             .accentColor(.blue)
             .sheet(item: $selectedBrewery) { brewery in
@@ -107,7 +110,7 @@ struct BreweryMapView: View {
                     .shadow(radius: 3)
                     
                     Button(action: {
-                        viewModel.fetchBreweries(at: viewModel.region.center)
+                        viewModel.fetchBreweries(at: viewModel.region.center, updateRegion: false)
                     }) {
                         Image(systemName: "arrow.triangle.2.circlepath")
                             .padding()
@@ -209,20 +212,29 @@ class BreweryMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate
     @Published var breweries: [BreweryMap] = []
     @Published var selectedPerPageIndex = 0
     let perPageOptions = [25, 50, 75, 100, 200]
+    private var initialLocationSet = false
+    
+    override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
     
     func checkIfLocationServicesIsEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestWhenInUseAuthorization()
         } else {
+            // Handle location services not enabled scenario
         }
     }
     
-    func fetchBreweries(at location: CLLocationCoordinate2D? = nil, perPage: Int? = nil) {
+    func fetchBreweries(at location: CLLocationCoordinate2D? = nil, perPage: Int? = nil, updateRegion: Bool = false) {
         let coordinate = location ?? locationManager.location?.coordinate ?? CLLocationCoordinate2D(latitude: 0, longitude: 0)
         let perPage = perPage ?? perPageOptions[selectedPerPageIndex] // Use selectedPerPageIndex if perPage is not provided
         let urlString = "https://api.openbrewerydb.org/v1/breweries?by_dist=\(coordinate.latitude),\(coordinate.longitude)&per_page=\(perPage)"
         guard let url = URL(string: urlString) else { return }
-        print(url)
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
                 print("Error fetching breweries: \(error?.localizedDescription ?? "Unknown error")")
@@ -232,7 +244,9 @@ class BreweryMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate
                 let breweries = try JSONDecoder().decode([BreweryMap].self, from: data)
                 DispatchQueue.main.async {
                     self.breweries = breweries
-                    self.updateMapRegion()
+                    if updateRegion {
+                        self.updateMapRegion(to: coordinate)
+                    }
                 }
             } catch {
                 print("Error decoding breweries: \(error.localizedDescription)")
@@ -240,11 +254,16 @@ class BreweryMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate
         }.resume()
     }
     
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let latestLocation = locations.first else { return }
-        region = MKCoordinateRegion(center: latestLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-        userTrackingMode = .none
+        if !initialLocationSet {
+            DispatchQueue.main.async {
+                self.region = MKCoordinateRegion(center: latestLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                self.userTrackingMode = .none
+                self.fetchBreweries(at: latestLocation.coordinate, updateRegion: true)
+                self.initialLocationSet = true
+            }
+        }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -258,16 +277,95 @@ class BreweryMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate
         }
     }
     
-    private func updateMapRegion() {
-        guard breweries.isEmpty else { return }
-        
-        if let userLocation = locationManager.location {
-            let coordinateRegion = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-            region = coordinateRegion
-        }
+    private func updateMapRegion(to coordinate: CLLocationCoordinate2D) {
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        self.region = coordinateRegion
     }
     
+    func getCurrentLocation() -> CLLocationCoordinate2D? {
+        return locationManager.location?.coordinate
+    }
 }
+
+
+
+
+
+
+//class BreweryMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+//    @Published var region = MKCoordinateRegion()
+//    @Published var userTrackingMode: MapUserTrackingMode = .follow
+//    private var locationManager = CLLocationManager()
+//    @Published var breweries: [BreweryMap] = []
+//    @Published var selectedPerPageIndex = 0
+//    let perPageOptions = [25, 50, 75, 100, 200]
+//    
+//    override init() {
+//        super.init()
+//        locationManager.delegate = self
+//    }
+//    
+//    func checkIfLocationServicesIsEnabled() {
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.requestWhenInUseAuthorization()
+//        } else {
+//            // Handle location services not enabled scenario
+//        }
+//    }
+//    
+//    func fetchBreweries(at location: CLLocationCoordinate2D? = nil, perPage: Int? = nil) {
+//        let coordinate = location ?? locationManager.location?.coordinate ?? CLLocationCoordinate2D(latitude: 0, longitude: 0)
+//        let perPage = perPage ?? perPageOptions[selectedPerPageIndex] // Use selectedPerPageIndex if perPage is not provided
+//        let urlString = "https://api.openbrewerydb.org/v1/breweries?by_dist=\(coordinate.latitude),\(coordinate.longitude)&per_page=\(perPage)"
+//        guard let url = URL(string: urlString) else { return }
+//        
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            guard let data = data, error == nil else {
+//                print("Error fetching breweries: \(error?.localizedDescription ?? "Unknown error")")
+//                return
+//            }
+//            do {
+//                let breweries = try JSONDecoder().decode([BreweryMap].self, from: data)
+//                DispatchQueue.main.async {
+//                    self.breweries = breweries
+//                    self.updateMapRegion()
+//                }
+//            } catch {
+//                print("Error decoding breweries: \(error.localizedDescription)")
+//            }
+//        }.resume()
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let latestLocation = locations.first else { return }
+//        DispatchQueue.main.async {
+//            self.region = MKCoordinateRegion(center: latestLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+//            self.userTrackingMode = .none
+//        }
+//    }
+//    
+//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+//        switch manager.authorizationStatus {
+//        case .notDetermined, .restricted, .denied:
+//            break
+//        case .authorizedAlways, .authorizedWhenInUse:
+//            locationManager.startUpdatingLocation()
+//        @unknown default:
+//            break
+//        }
+//    }
+//    
+//    private func updateMapRegion() {
+//        guard breweries.isEmpty else { return }
+//        
+//        if let userLocation = locationManager.location {
+//            DispatchQueue.main.async {
+//                let coordinateRegion = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+//                self.region = coordinateRegion
+//            }
+//        }
+//    }
+//}
 
 struct BreweryMap: Codable, Identifiable {
     var id: String

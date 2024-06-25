@@ -16,6 +16,7 @@ struct BreweryCountryViewDetail: View {
     @State private var page = 1
     @State private var canLoadMore = true
     @State private var error: Error?
+    @State private var showErrorAlert = false
     @State private var searchText = ""
     
     private let breweryService = BreweryServiceCountry()
@@ -37,7 +38,7 @@ struct BreweryCountryViewDetail: View {
                     .font(.title)
                     .padding(.trailing, 40)
                 Spacer()
-            }.frame(width:widthFull, height: 60)
+            }.frame(width: UIScreen.main.bounds.width, height: 60)
             
             TextField("Search breweries...", text: $searchText)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -50,8 +51,8 @@ struct BreweryCountryViewDetail: View {
                             UserDefaults.standard.set(brewery.id, forKey: "SelectedBreweryId")
                             navigationManager.push(.breweryDetail, breweryId: brewery.id)
                         }) {
-                            HStack() {
-                                Image(systemName: IconUtility.icon(for:brewery.brewery_type))
+                            HStack {
+                                Image(systemName: IconUtility.icon(for: brewery.brewery_type))
                                     .foregroundColor(Color.Brew_Text)
                                     .font(.title)
                                     .frame(width: 30, height: 30)
@@ -78,13 +79,21 @@ struct BreweryCountryViewDetail: View {
                         }
                     }
                 }
-            }.navigationBarHidden(true)
-                .edgesIgnoringSafeArea(.all)
-                .onAppear {
-                    page = 1
-                    breweries = []
-                    loadMoreBreweries()
-                }
+            }
+            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.all)
+            .onAppear {
+                page = 1
+                breweries = []
+                loadMoreBreweries()
+            }
+            .alert(isPresented: $showErrorAlert) {
+                Alert(
+                    title: Text("Error"),
+                    message: Text(error?.localizedDescription ?? "Unknown error"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
     
@@ -101,6 +110,7 @@ struct BreweryCountryViewDetail: View {
                 self.page += 1
             } else if let error = error {
                 self.error = error
+                self.showErrorAlert = true
                 self.canLoadMore = false
             }
         }

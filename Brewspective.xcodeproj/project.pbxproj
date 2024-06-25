@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2D49F82C25CD350064EDAA /* BreweryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D49F72C25CD350064EDAA /* BreweryImageView.swift */; };
+		AA2D49FA2C25CD820064EDAA /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D49F92C25CD820064EDAA /* ImageViewer.swift */; };
 		AA38A92C2C007BD500428A86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA38A92B2C007BD500428A86 /* FavoriteView.swift */; };
 		AA51B5BD2BDC08C700C7D4BA /* BrewerySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5BC2BDC08C700C7D4BA /* BrewerySettingsView.swift */; };
 		AA51B5C02BDFB4D400C7D4BA /* BreweryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51B5BF2BDFB4D400C7D4BA /* BreweryService.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA2D49F72C25CD350064EDAA /* BreweryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryImageView.swift; sourceTree = "<group>"; };
+		AA2D49F92C25CD820064EDAA /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 		AA38A92B2C007BD500428A86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		AA51B5BC2BDC08C700C7D4BA /* BrewerySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewerySettingsView.swift; sourceTree = "<group>"; };
 		AA51B5BF2BDFB4D400C7D4BA /* BreweryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryService.swift; sourceTree = "<group>"; };
@@ -123,8 +127,10 @@
 		AA2D04C52BFF237100B4C164 /* Brewery */ = {
 			isa = PBXGroup;
 			children = (
+				AA2D49F72C25CD350064EDAA /* BreweryImageView.swift */,
 				AA5FD5542BD9775100323523 /* BreweryView.swift */,
 				AA5FD5562BD97D3E00323523 /* BreweryDetailView.swift */,
+				AA2D49F92C25CD820064EDAA /* ImageViewer.swift */,
 			);
 			path = Brewery;
 			sourceTree = "<group>";
@@ -291,10 +297,12 @@
 				AA51B5BD2BDC08C700C7D4BA /* BrewerySettingsView.swift in Sources */,
 				AA5FD55F2BDA71E400323523 /* NavigationManager.swift in Sources */,
 				AA706A542BE3C18E005EFBC3 /* BreweryMapDetailsView.swift in Sources */,
+				AA2D49FA2C25CD820064EDAA /* ImageViewer.swift in Sources */,
 				AA5FD5552BD9775100323523 /* BreweryView.swift in Sources */,
 				AA7562CB2BEBA5CA000EAA80 /* BreweryCountryView.swift in Sources */,
 				AA51B5C42BDFC57D00C7D4BA /* LocationUtility.swift in Sources */,
 				AA51B5C22BDFC53B00C7D4BA /* BreweryModels.swift in Sources */,
+				AA2D49F82C25CD350064EDAA /* BreweryImageView.swift in Sources */,
 				AA38A92C2C007BD500428A86 /* FavoriteView.swift in Sources */,
 				AA5FD55D2BD97FC800323523 /* BreweryTypeView.swift in Sources */,
 			);
@@ -429,17 +437,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
 				DEVELOPMENT_TEAM = 57973X84UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Brewspective/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "get your location to a brewery";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "location for brewery";
-				INFOPLIST_KEY_NSLocationUsageDescription = "To know how close you are to a brewery";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = brewery;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera so you can take photos of the brewery";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select photos of a brewery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,17 +479,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Brewspective/Preview Content\"";
 				DEVELOPMENT_TEAM = 57973X84UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Brewspective/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "get your location to a brewery";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "location for brewery";
-				INFOPLIST_KEY_NSLocationUsageDescription = "To know how close you are to a brewery";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = brewery;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera so you can take photos of the brewery";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We would like to use your location to show you how close you are to a nearby brewery.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to select photos of a brewery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

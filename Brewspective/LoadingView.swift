@@ -48,8 +48,8 @@ struct LoadingView: View {
             Text("Please wait while we load the content.")
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 3)) {
-                fillLevel = 0.8
+            withAnimation(.easeInOut(duration: 2.5)) {
+                fillLevel = 0.9
             }
         }
  

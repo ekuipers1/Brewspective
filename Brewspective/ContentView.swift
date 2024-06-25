@@ -50,6 +50,12 @@ struct ContentView: View {
                             } else {
                                 Text("No Country Selected")
                             }
+                        case .breweryImage:
+                            if let selectedImage = navigationManager.selectedImage {
+                                BreweryImageView(image: selectedImage)
+                            } else {
+                                Text("No Image Selected")
+                            }
                         case .breweryDetail:
                             if let breweryId = navigationManager.selectedBreweryId {
                                 BreweryDetailView(breweryId: breweryId)
@@ -62,15 +68,23 @@ struct ContentView: View {
                             } else {
                                 Text("No Icon Selected")
                             }
+                        case .breweryImageViewer:  // Handle the new navigation case
+                                                   if let breweryId = navigationManager.selectedBreweryId {
+                                                       ImageViewer(breweryId: breweryId)
+                                                   } else {
+                                                       Text("No Brewery Selected")
+                                                   }
                         }
                     }
-                    .navigationTitle("Navigation")
+                    .navigationTitle("")
+                    .navigationBarHidden(true)
                 }
                 .environmentObject(navigationManager)
             }
         }
     }
 }
+
 
 #Preview {
     ContentView()

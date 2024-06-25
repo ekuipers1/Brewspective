@@ -51,6 +51,8 @@ class BreweryService {
             }
         }.resume()
     }
+
+
     
     func fetchAllBreweries(query: String = "", currentPage: Int = 1, allBreweries: [Brewery] = [], completion: @escaping ([Brewery]?, Error?) -> Void) {
         fetchBreweries(query: query, page: currentPage) { breweries, error in

@@ -5,6 +5,7 @@
 //  Created by Erik Kuipers on 25.04.24.
 //
 
+import SwiftUI
 import Combine
 
 class NavigationManager: ObservableObject {
@@ -12,14 +13,17 @@ class NavigationManager: ObservableObject {
     @Published var selectedBreweryId: String?
     @Published var selectedCountry: Country?
     @Published var selectedIcon: IconInfo?
+    @Published var selectedImage: UIImage?
     
-    
-    func push(_ view: ViewName, breweryId: String? = nil, icon: IconInfo? = nil) {
+    func push(_ view: ViewName, breweryId: String? = nil, icon: IconInfo? = nil, image: UIImage? = nil) {
         if let id = breweryId {
             selectedBreweryId = id
         }
         if let icon = icon {
             selectedIcon = icon
+        }
+        if let image = image {
+            selectedImage = image
         }
         viewStack.append(view)
         objectWillChange.send()
@@ -49,7 +53,7 @@ class NavigationManager: ObservableObject {
         objectWillChange.send()
     }
     
-    enum ViewName {
+    enum ViewName: Equatable {
         case home
         case breweryAll
         case breweryFav
@@ -62,5 +66,7 @@ class NavigationManager: ObservableObject {
         case breweryCountry
         case breweryCountryDetail
         case breweryTypeViewDetail
+        case breweryImage
+        case breweryImageViewer
     }
 }
